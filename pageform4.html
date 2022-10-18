@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <meta charset="utf-8">
+        <javascript defer src="javascript.js"></javascript>
+      </head>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(16, 163, 163);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f7e9e9;
+  padding: 20px;
+}
+.error
+{
+    color:red;
+    size: 80%
+}
+.hidden
+{
+    display:none;
+}
+button
+{
+    background-color:rgb(68, 137, 62);
+}
+</style>
+<script>
+  function validateForm() {
+  // Retrieving the values of form elements
+  var name = document.myform.name.value;
+  var email = document.myform.email.value;
+  var phone = document.myform.phone.value;
+  }
+</script>
+<body>
+
+
+<h3 style="text-align:left;font-family: 'Times New Roman', Times, serif;"><i>Register here for upcoming movie updates</i></h3>
+
+
+<div>
+   
+  <form id="myform" method="post" action="https://www.randyconnolly.com/tests/process.php"
+  onsubmit="return validateForm()"
+  novalidate>
+    <fieldset>
+        <legend> DETAILS</legend>
+    <label for="name"> First name</label>
+    <input type="text" id="name" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Your password.." required>
+    <div id="error"></div>
+
+    <p>which is ur favourite genre</p>
+  
+
+      <input type="radio" id="Horror" name="genres" value="Horror">
+      <label for="horror">Horror</label><br>
+      <input type="radio" id="Drama" name="genres" value="Drama">
+      <label for="Drama">Drama</label><br>
+      <input type="radio" id="Action" name="genres" value="Action">
+      <label for="Action">Action</label><br>
+
+
+
+
+
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">India</option>
+    </div>
+
+    </select>
+
+    <!-- <input type="text" id="phnmber" name="phonenumber" required> -->
+    <!-- <input type="submit" value="Submit"> -->
+</fieldset>
+<!-- <a href="javascript: submitform()">Submit</a> -->
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+<!-- <script>
+    var form = document.getElementById('myform')
+    form.addEventListener('submit', function(event)
+    {
+        var password= document.getElementById('password').value
+        console.log(password)
+    })
+ 
+
+</script> -->
+</html>
