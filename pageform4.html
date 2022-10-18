@@ -4,24 +4,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Form</title>
         <meta charset="utf-8">
-        <javascript defer src="javascript.js"></javascript>
-      </head>
+        <script defer src="script.js"></script>
+      
+
 <style>
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid rgb(16, 163, 163);
+  border: 1px solid rgb(190, 175, 175);
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
+  background-color: #73cf76;
+  color: rgb(184, 63, 63);
+  padding: 20px 14px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
@@ -29,18 +30,18 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #0c5a10;
 }
 
 div {
-  border-radius: 5px;
-  background-color: #f7e9e9;
-  padding: 20px;
+  border-radius: 15px;
+  background-color: #bf3636;
+  padding: 50px;
 }
 .error
 {
-    color:red;
-    size: 80%
+    color:rgb(22, 20, 56);
+    /* size: 80% */
 }
 .hidden
 {
@@ -48,53 +49,43 @@ div {
 }
 button
 {
-    background-color:rgb(68, 137, 62);
+    background-color:rgb(85, 54, 49);
 }
 </style>
-<script>
-  function validateForm() {
-  // Retrieving the values of form elements
-  var name = document.myform.name.value;
-  var email = document.myform.email.value;
-  var phone = document.myform.phone.value;
-  }
-</script>
+</head>
+
+
 <body>
 
 
-<h3 style="text-align:left;font-family: 'Times New Roman', Times, serif;"><i>Register here for upcoming movie updates</i></h3>
+<h3 style="background-color:text-align:center;font-family: 'Times New Roman', Times, serif;"><i>Register here for more updates</i></h3>
+
 
 
 <div>
-   
-  <form id="myform" method="post" action="https://www.randyconnolly.com/tests/process.php"
-  onsubmit="return validateForm()"
-  novalidate>
+   <!-- creating a form and observing output using php -->
+  <form id="myform" method="post" action="https://www.randyconnolly.com/tests/process.php " >
+    
     <fieldset>
-        <legend> DETAILS</legend>
-    <label for="name"> First name</label>
+        <legend> Register</legend>
+    <label for="name">name</label>
     <input type="text" id="name" name="firstname" placeholder="Your name.." required>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+    <label for="name">Last Name</label>
+    <input type="text" id="name1" name="lastname" placeholder="Your last name.." required>
 
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Your password.." required>
+    <input type="password" id="password" name="password" placeholder="Your password..">
     <div id="error"></div>
 
-    <p>which is ur favourite genre</p>
+    <p>Intreseted in movies?</p>
   
 
-      <input type="radio" id="Horror" name="genres" value="Horror">
-      <label for="horror">Horror</label><br>
-      <input type="radio" id="Drama" name="genres" value="Drama">
-      <label for="Drama">Drama</label><br>
-      <input type="radio" id="Action" name="genres" value="Action">
-      <label for="Action">Action</label><br>
-
-
-
-
+      <input type="radio" id="yes" name="genres" value="Yes">
+      <label for="yes">Yes</label><br>
+      <input type="radio" id="No" name="genre" value="No">
+      <label for="No">No</label><br>
+     
 
 
     <label for="country">Country</label>
@@ -103,26 +94,16 @@ button
       <option value="canada">Canada</option>
       <option value="usa">USA</option>
       <option value="usa">India</option>
-    </div>
+    <!-- </div> -->
 
     </select>
 
-    <!-- <input type="text" id="phnmber" name="phonenumber" required> -->
+    
     <!-- <input type="submit" value="Submit"> -->
 </fieldset>
-<!-- <a href="javascript: submitform()">Submit</a> -->
-<input type="submit" value="Submit">
+<button type="submit">Submit</button>
 </form>
 </div>
-</body>
-<!-- <script>
-    var form = document.getElementById('myform')
-    form.addEventListener('submit', function(event)
-    {
-        var password= document.getElementById('password').value
-        console.log(password)
-    })
- 
 
-</script> -->
+</body>
 </html>
